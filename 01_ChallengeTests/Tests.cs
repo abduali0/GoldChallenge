@@ -1,4 +1,7 @@
 ﻿using System;
+using _01_ChallengeRepo;
+using _01_ChallengeConsole;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace _01_ChallengeTests
 {
@@ -7,6 +10,8 @@ namespace _01_ChallengeTests
     {
         private Repository _contentRepo;
         private FoodMenu _content;
+
+        public object Assert { get; private set; }
 
         [TestInitialize]
         public void Initialize()
@@ -40,7 +45,7 @@ namespace _01_ChallengeTests
         [TestMethod]
         public void POCOTest()
         {
-            Menu neworder = new Menu(1, "Cheeseburger", "Plain old burger", "2 buns, 1 patty");
+            Menu neworder = new Menu(1, "Philly Cheesesteak", "Good ol' Philly.", "Steak, cheese, hoagie roll");
 
             Assert.AreEqual(1, neworder.ItemNumber);
             Assert.AreEqual("Cheeseburger", neworder.Name);

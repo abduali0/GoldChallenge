@@ -2,11 +2,12 @@
 
 namespace _03_ChallengeConsole
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            UI program = new UI();
+            program.Run();
         }
     }
 }
